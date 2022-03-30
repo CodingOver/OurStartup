@@ -1,0 +1,11 @@
+nav {
+  direction: rtl;
+}
+.toggle-menu {
+  left: 0;
+  transform-origin: left;
+}
+.hidden-icon {
+  position: sticky;
+  right: 393px;
+}
