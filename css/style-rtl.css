@@ -1,4 +1,8 @@
-nav {
+nav,
+.header-cover,
+.features,
+.about-service,
+.services {
   direction: rtl;
 }
 .toggle-menu {
@@ -8,4 +12,33 @@ nav {
 .hidden-icon {
   position: sticky;
   right: 393px;
+}
+.landscape-cover .flag {
+  background-position: 100%;
+}
+
+@media (min-width: 496px) {
+  .landscape-cover .flag {
+    background-position: 350%;
+  }
+}
+@media (min-width: 545px) {
+  .landscape-cover .flag {
+    background-position: 500%;
+  }
+}
+@media (min-width: 640px) {
+  .landscape-cover .flag {
+    background-position: 100%;
+  }
+}
+
+/* Medium */
+@media (min-width: 768px) {
+  .landscape-cover .flag {
+    background-position: 128%;
+  }
+}
+/* Large */
+@media (min-width: 1024px) {
 }
