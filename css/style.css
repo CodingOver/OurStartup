@@ -30,7 +30,6 @@
 body {
   background-color: var(--mainColor);
   overflow-x: hidden;
-  height: 1000px;
 }
 /* Start Header */
 
@@ -457,6 +456,40 @@ form .name input[type="text"] {
   background-color: var(--btnColor);
 }
 /* End Contact Section */
+/* start footer */
+footer {
+  background-color: var(--primary-shadow-soft);
+  display: flex;
+  flex-direction: column;
+  margin: 20px 20px 0;
+}
+footer p {
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+footer ul {
+  display: flex;
+}
+footer ul li {
+  list-style: none;
+  margin-bottom: 30px;
+}
+footer ul li a {
+  color: var(--mainColor);
+  padding: 10px;
+  border: 1px solid var(--mainColor);
+  margin-left: 10px;
+  font-size: 20px;
+  transition: all 0.4s ease-in-out;
+  border-radius: 5px;
+}
+footer ul li a:hover {
+  background-color: var(--btnColor);
+  color: var(--whiteColor);
+  border: 1px solid var(--primary-shadow-light);
+}
+
+/* End Footer */
 /* Small */
 @media (max-width: 639px) {
   .pages-list {
@@ -684,9 +717,13 @@ form .name input[type="text"] {
     display: flex;
   }
   .contact-direct {
-    margin: 100px 0;
+    margin-top: 100px;
     flex-direction: row;
     justify-content: space-around;
+  }
+  footer {
+    flex-direction: row;
+    justify-content: space-between;
   }
 }
 /* XL */
