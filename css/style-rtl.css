@@ -2,7 +2,8 @@ nav,
 .header-cover,
 .features,
 .about-service,
-.services {
+.services,
+.contact {
   direction: rtl;
 }
 .toggle-menu {

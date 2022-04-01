@@ -365,6 +365,97 @@ nav .toggle i {
 }
 /* End Services Section */
 /* Start Contact Section */
+.contact {
+  background-color: var(--whiteColor);
+}
+.contact-by {
+  text-align: center;
+  padding: 30px;
+}
+.contact-by i {
+  font-size: 50px;
+  margin: 40px 0;
+  color: var(--btnColor);
+}
+.contact-by h6 {
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+.contact-by p {
+  line-height: 1.7rem;
+  font-size: 18px;
+  margin: 25px auto;
+  width: 70%;
+}
+.contact-by a {
+  text-decoration: underline;
+  font-size: 25px;
+  color: var(--btnColor);
+}
+.contact-by .email {
+  background-color: var(--btnColor);
+  color: var(--whiteColor);
+  padding: 15px 40px;
+  border-radius: 7px;
+  text-decoration: none;
+}
+.contact-direct {
+  margin: 30px 20px;
+  display: flex;
+  flex-direction: column;
+}
+.contact-direct .text {
+  margin: 30px 0;
+}
+.contact-direct h6 {
+  font-size: 50px;
+}
+.contact-direct p,
+.contact-direct span {
+  font-size: 20px;
+  line-height: 2rem;
+}
+.contact-direct .form form {
+  display: flex;
+  flex-direction: column;
+}
+form .name {
+  display: flex;
+  flex-direction: column;
+}
+
+form .name input[type="text"] {
+  width: 100%;
+}
+.contact-direct input[type="text"],
+.contact-direct input[type="email"],
+.contact-direct input[type="number"],
+.contact-direct input[type="submit"] {
+  padding: 20px;
+  margin: 10px 5px;
+  border: none;
+  background-color: var(--primary-soft);
+}
+.contact-direct input[type="text"]:focus,
+.contact-direct input[type="email"]:focus,
+.contact-direct input[type="number"]:focus {
+  outline: 2px solid var(--selection);
+}
+.contact-direct input::placeholder {
+  color: var(--linkMenuBlack);
+  font-size: 20px;
+}
+.contact-direct input[type="submit"] {
+  color: var(--whiteColor);
+  background-color: var(--selection);
+  font-size: 20px;
+  text-transform: uppercase;
+  transition: all 0.4s linear;
+  cursor: pointer;
+}
+.contact-direct input[type="submit"]:hover {
+  background-color: var(--btnColor);
+}
 /* End Contact Section */
 /* Small */
 @media (max-width: 639px) {
@@ -491,6 +582,9 @@ nav .toggle i {
   .design-graphics img {
     width: 60%;
   }
+  form .name {
+    flex-direction: row;
+  }
 }
 
 /* Large */
@@ -585,6 +679,14 @@ nav .toggle i {
   }
   .agile .design-graphics {
     margin: 0 100px;
+  }
+  .contact-by {
+    display: flex;
+  }
+  .contact-direct {
+    margin: 100px 0;
+    flex-direction: row;
+    justify-content: space-around;
   }
 }
 /* XL */
