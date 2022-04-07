@@ -8,8 +8,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/get-started.css">
     <link rel="stylesheet" href="./css/style-rtl.css">
+    <link rel="stylesheet" href="./css/get-started.css">
     <link rel="stylesheet" href="./css/get-started-rtl.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
@@ -21,16 +21,14 @@
                     <img src="https://quiety.themetags.com/assets/img/logo-white.png" alt="logo">
                 </div>
                 <ul class="pages-list" id="nav-ul">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Project</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Team</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Markets</a></li>
+                    <li><a href="#about">من نحن</a></li>
+                    <li><a href="#services">خدماتنا</a></li>
+                    <li><a href="#contact">تواصل معنا</a></li>
+                    <li><a href="#">المقالات التعليمية</a></li>
                 </ul>
                 <div class="header-btn">
-                    <a class="sign-in-btn" href="./login.html">Sign In</a>
-                    <button class="get-Started-btn"><a href="./get-started.html">Get Started</a></button>
+                    <a class="sign-in-btn" href="./login.html">تسجيل الدخول</a>
+                    <button class="get-Started-btn"><a href="./get-started.html">لنبدأ الآن</a></button>
                 </div>
                 <div class="toggle">
                     <i id="toggle-icon" class="fa-solid fa-align-justify"></i>
@@ -41,16 +39,14 @@
                         <img src="https://quiety.themetags.com/assets/img/logo-color.png" alt="logo">
                     </div>
                     <ul class="pages-list-menu" id="nav-ul">
-                        <li><a href="">Home</a></li>
-                        <li><a href="#">Project</a></li>
-                        <li><a href="#">Services</a></li>
-                        <li><a href="#">Team</a></li>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Markets</a></li>
+                        <li><a href="#about">من نحن</a></li>
+                    <li><a href="#services">خدماتنا</a></li>
+                    <li><a href="#contact">تواصل معنا</a></li>
+                    <li><a href="#">المقالات التعليمية</a></li>
                     </ul>
                     <div class="header-btn-menu">
-                        <button class="sign-in-btn-menu"><a href="./login.html">Sign In</a></button>
-                        <button class="get-Started-btn-menu"><a href="./get-started.html">Get Started</a></button>
+                        <button class="sign-in-btn-menu"><a href="./login.html">تسجيل الدخول</a></button>
+                        <button class="get-Started-btn-menu"><a href="./get-started.html">لنبدأ الآن</a></button>
                     </div>
                     <div class="hidden-icon" id="removeMenu">
                         <i class="fa-solid fa-xmark"></i>
@@ -62,8 +58,8 @@
     <div class="get-started">
         <div class="get-started-container">
             <div class="form-info">
-                <span>schedule a call</span>
-                <h1>Let's Get Your Project Started.</h1>
+                <span>جدولة مكالمة</span>
+                <h1>لنبدأ مشروعك.</h1>
                 <p>It's time redefine what awesome really looks like.</p>
                 <p>Whatever your goal or project size we will handel it utilize standards compliant. We hope you will be 100% satisfied.</p>
                 <img src="./imgs/Asset_developer-1.svg" alt="">
@@ -77,20 +73,22 @@
             <h2>Discuss Your Latest Project With Ovolet Specialist.</h2>
             <p>We're looking forward to working together. Share your thoughts below and one of our Ovolet specialist will be in touch shortly</p>
             <form action="#" class="input-form">
-                <input type="text" placeholder="Name" required>
-                <input type="email" placeholder="Email" required>
-                <input type="number" placeholder="Number">
-                <input type="text" placeholder="Company">
-                <input type="text" placeholder="Country">
-                <select name="budget" id="budget">
-                    <option value="">Budget</option>
-                    <option value="Less than 1000$">Less than 1000$</option>
-                    <option value="1000$ to 5000$">1000$ to 5000$</option>
-                    <option value="6000$ to 12000$">6000$ to 12000$</option>
-                    <option value="15000$ to 30000$">15000$ to 30000$</option>
-                    <option value="30000$ to 60000$">30000$ to 60000$</option>
-                    <option value="More than 60000$">More than 60000$</option>
-                </select>
+                <div class="inputs">
+                    <input type="text" placeholder="Name" required>
+                    <input type="email" placeholder="Email" required>
+                    <input type="number" placeholder="Number">
+                    <input type="text" placeholder="Company">
+                    <input type="text" placeholder="Country">
+                    <select name="budget" id="budget">
+                        <option value="">Budget</option>
+                        <option value="Less than 1000$">Less than 1000$</option>
+                        <option value="1000$ to 5000$">1000$ to 5000$</option>
+                        <option value="6000$ to 12000$">6000$ to 12000$</option>
+                        <option value="15000$ to 30000$">15000$ to 30000$</option>
+                        <option value="30000$ to 60000$">30000$ to 60000$</option>
+                        <option value="More than 60000$">More than 60000$</option>
+                    </select>
+                </div>
                 <textarea  placeholder="Tell us more about your project" style="height: 120px; width: auto;"></textarea>
                 <input type="submit" value="Get Started">
             </form>

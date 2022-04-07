@@ -1,6 +1,7 @@
 nav,
 .header-cover,
 .features,
+.about,
 .about-service,
 .services,
 .contact {
@@ -16,6 +17,13 @@ nav,
 }
 .landscape-cover .flag {
   background-position: 100%;
+}
+.video-detail video {
+  position: relative;
+  right: -1rem;
+}
+.video-detail video {
+  right: -19rem;
 }
 
 @media (min-width: 496px) {

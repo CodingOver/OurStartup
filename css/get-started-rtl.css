@@ -1,4 +1,6 @@
 .get-started {
-  flex-direction: row-reverse;
-  text-align: right;
+  direction: rtl;
+}
+.form {
+  height: auto;
 }
