@@ -49,6 +49,7 @@ body {
   transform-origin: right;
   transition: transform 0.5s ease-in-out;
   overflow-y: auto;
+  height: 100vh;
 }
 .toggle-menu .pages-list-menu li {
   list-style: none;
@@ -122,6 +123,11 @@ body {
   transform: rotateY(360deg);
 }
 header nav {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
   background-color: var(--mainColor);
   color: var(--whiteColor);
   display: flex;
@@ -504,6 +510,7 @@ footer ul li a:hover {
 @media (min-width: 640px) {
   .toggle-menu {
     width: 500px;
+    height: 100vh;
   }
   .pages-list {
     display: none;
