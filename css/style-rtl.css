@@ -7,10 +7,10 @@ nav,
 .contact {
   direction: rtl;
 }
-.toggle-menu {
-  left: 0;
+/* .toggle-menu {
+  left: 0 !important;
   transform-origin: left;
-}
+} */
 .hidden-icon {
   position: sticky;
   right: 393px;
