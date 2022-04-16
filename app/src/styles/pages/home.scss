@@ -428,4 +428,14 @@ background-position: 0 0,10px 10px;
             }
         }
     }
+    @include max-screen(624px) {
+        flex-direction: column;
+        p {
+            max-width: 100%;
+            text-align: center;
+        }
+        &__social {
+            display: flex;
+        }
+    }
 }
