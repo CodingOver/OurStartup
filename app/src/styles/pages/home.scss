@@ -1,0 +1,288 @@
+// Navigation ------------------------------------------------------
+
+.navigation {
+    margin: 0 10%;
+    height: 100px;
+    padding: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    &__items {
+        display: none;
+    }
+    &__toggle {
+        color: black;
+        font-size: 2em;
+        cursor: pointer;
+    }
+
+    @include max-screen(1024px)  {
+        margin: 0 5%;
+    }
+}
+
+// Hero ------------------------------------------------------
+
+.hero {
+    margin: 0 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &__content {
+        width: 50%;
+        padding: $default-padding;
+        h1 {
+            color: $primary-color;
+            font-size: 38px;
+        }
+        p {
+            margin: 20px 0;
+        }
+        a {
+            margin-top: 0;
+            text-decoration: none;
+            background-color: $purple;
+            color: white;
+            padding: 10px 40px;
+            border-radius: 20px;
+            font-weight: bold;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        }
+    }
+
+    &__image {
+        display: flex;
+        justify-content: flex-end;
+        width: 50%;
+        height: 100%;
+        max-height: 500px;
+    }
+    @include max-screen(1024px)  {
+        margin: 0 5%;
+        &__content {
+            width: 60%;
+            h1 {
+                font-size: 32px;
+            }
+            p {
+                margin: 40px 0 !important;
+            }
+        }
+    }
+    @include max-screen(624px) {
+        &__content {
+            width: 100%;
+            h1 {
+                font-size: 26px;
+            }
+            p {
+                margin: 40px 0 !important;
+            }
+        }
+    }
+}
+
+// Service ------------------------------------------------------
+
+.services {
+    border-radius: 5px;
+    margin: 0 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    margin-top: 30px;
+    
+    .service {
+        display: flex;
+        align-items: center;
+        border-radius: 5px;
+        height: 100%;
+        width: 30%;
+        background-color: white;
+        box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+        // box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+        &__icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: $purple;
+            height: 100%;
+            width: 90px;
+            border-radius: 5px 0 0 5px;
+
+            i {
+                font-size: 27px;
+                color: white;
+            }
+        }
+        &__name {
+            display: flex;
+            align-items: center;
+            padding-left: 15px;
+            background-color: white;
+            height: 100%;
+            width: 200px;
+            border-radius: 0 5px 5px 0;
+
+        }
+    }
+    @include max-screen(1024px)  {
+        margin: 0 5%;
+        margin-top: 30px;
+    }
+
+    @include max-screen(624px)  {
+        flex-wrap: wrap;
+        justify-content: space-around;
+        .service {
+            width: 47%;
+            margin-bottom: 20px;
+        }
+    }
+
+    @include max-screen(624px) {
+        height: 50px;
+        .service {
+            &__icon {
+                i {
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+}
+
+
+// About ------------------------------------------------------
+
+.about {
+    height: auto;
+    margin: 40px 10%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 50px;
+    border-radius: 5px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+
+    
+    &__title {
+        width: 500px;
+        text-align: center;
+        font-size: 25px;
+    }
+    &__items {
+        display: flex;
+        margin-top: 50px;
+    }
+    &__item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 10px;
+        padding: 10px;
+        min-height: 150px;
+        background-color: white;
+        border-radius: 5px;
+        // box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+        box-shadow: rgba(0, 0, 0, 0.2) 0px 18px 50px -10px;
+        // box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+        p {
+            margin-top: 10px;
+            text-align: center;
+        }
+    }
+    @include max-screen(1024px)  {
+        margin: 0 5%;
+        margin-top: 30px;
+    }
+    @include max-screen(624px)  {
+        margin-top: 130px;
+        &__items {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+}
+
+// // Design ------------------------------------------------------
+
+.design {
+    // background-color: $primary-soft;
+    margin: 30px;
+    &__card {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    &__content {
+        width: 50%;
+        h2 {
+            color: $primary-color;
+            font-size: 30px;
+            margin-bottom: 10px;
+        }
+        span {
+            background-color: $purple;
+            border-radius: 20px;
+            padding: 0 20px;
+            color: white;
+        }
+        p {
+            margin: 10px 0;
+        }
+    }
+    &__image {
+        img {
+            max-width: 400px;
+        }
+    }
+    @include max-screen(1024px)  {
+        &__image {
+            img {
+                max-width: 300px;
+            }
+        }
+    }
+    @include max-screen(624px)  {
+        &__card {
+            display: flex;
+            flex-direction: column;
+        }
+        &__card:nth-child(2) {
+            margin-top: 40px;
+            flex-direction: column-reverse;
+        }
+        &__content {
+            width: 100%;
+        }
+    }
+}
+
+// Media query ------------------------------------------------------
+
+@include min-screen(1024px) {
+    body {
+        // display: none;
+    }
+}
+
+@include max-screen(1024px)  {
+    body {
+        // display: none;
+    }
+}
+
+@include min-screen(480px)  {
+    background-color: blue;
+}
+
+@include min-screen(320px)  {
+    background-color: red;
+}
+@include min-screen(480px)  {
+    background-color: blue;
+}
