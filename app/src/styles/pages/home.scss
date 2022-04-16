@@ -10,14 +10,36 @@
     &__items {
         display: none;
     }
-    &__toggle {
-        color: black;
-        font-size: 2em;
-        cursor: pointer;
+    &__start {
+        button {
+            background-color: $gold;
+            border: 0;
+            padding: 7px 25px;
+            border-radius: 30px;
+            color: $primary-color;
+            font-weight: 900;
+            font-size: 18px;
+            cursor: pointer;
+        }
     }
 
     @include max-screen(1024px)  {
         margin: 0 5%;
+    }
+    @include max-screen(480px)  {
+        margin: 0;
+        &__logo {
+            img {
+                margin-top: 10px;
+                width: 150px;
+            }
+        }
+        &__start {
+            button {
+                padding: 7px 20px;
+                font-size: 14px;
+            }
+        }
     }
 }
 
@@ -38,7 +60,7 @@
         p {
             margin: 20px 0;
         }
-        a {
+        button {
             margin-top: 0;
             text-decoration: none;
             background-color: $purple;
@@ -47,6 +69,8 @@
             border-radius: 20px;
             font-weight: bold;
             box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            border: 0;
+            cursor: pointer;
         }
     }
 
@@ -80,6 +104,35 @@
             }
         }
     }
+    @include max-screen(480px)  {
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+        &__content {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            h1 {
+                font-size: 24px;
+                text-align: center;
+            }
+            p {
+                margin: 20px 0 !important;
+                text-align: center;
+            }
+        }
+        &__image {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            img {
+                width: 100%;
+                min-width: 250px;
+            }
+        }
+    }
 }
 
 // Service ------------------------------------------------------
@@ -90,7 +143,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 60px;
+    height: 40px;
     margin-top: 30px;
     
     .service {
@@ -101,18 +154,17 @@
         width: 30%;
         background-color: white;
         box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
-        // box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
         &__icon {
             display: flex;
             align-items: center;
             justify-content: center;
-            background-color: $purple;
+            background-color: $primary-color;
             height: 100%;
             width: 90px;
             border-radius: 5px 0 0 5px;
 
             i {
-                font-size: 27px;
+                font-size: 25px;
                 color: white;
             }
         }
@@ -151,6 +203,23 @@
             }
         }
     }
+
+    @include max-screen(480px) {
+        margin: 0 5%;
+        .service {
+            &:nth-child(2) {
+                flex-direction: row-reverse;
+                .service__icon {
+                    border-radius: 0 5px 5px 0;
+                }
+            }
+            &__icon {
+                background-color: $primary-color;
+            }
+            width: 100%;
+            margin-bottom: 20px;
+        }
+    }
 }
 
 
@@ -187,9 +256,7 @@
         min-height: 150px;
         background-color: white;
         border-radius: 5px;
-        // box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
         box-shadow: rgba(0, 0, 0, 0.2) 0px 18px 50px -10px;
-        // box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
         p {
             margin-top: 10px;
             text-align: center;
@@ -206,12 +273,19 @@
             flex-direction: column;
         }
     }
+    @include max-screen(480px)  {
+        margin: 0;
+        margin-top: 160px;
+        &__title {
+            max-width: 90%;
+        }
+    }
+
 }
 
 // // Design ------------------------------------------------------
 
 .design {
-    // background-color: $primary-soft;
     margin: 30px;
     &__card {
         display: flex;
@@ -262,27 +336,96 @@
     }
 }
 
-// Media query ------------------------------------------------------
+// Contact ------------------------------------------------------
 
-@include min-screen(1024px) {
-    body {
-        // display: none;
+.contact {
+    background-color: #e5e5f7;
+background-image:  radial-gradient(#444cf7 0.5px, transparent 0.5px), radial-gradient(#444cf7 0.5px, #e5e5f7 0.5px);
+background-size: 20px 20px;
+background-position: 0 0,10px 10px;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &__close {
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin: 30px;
+        font-size: 35px;
+        cursor: pointer;
+        color: $purple;
+    }
+    &__form {
+        background-color: white;
+        height: auto;
+        width: 80%;
+        border-radius: 5px;
+        max-width: 500px;
+        padding: 20px;
+        padding-bottom: 40px;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+        &__content {
+            margin-top: 30px;
+            h2 {
+                color: $purple;
+                font-size: 20px;
+            }
+            p {
+                font-size: 14px;
+                margin: 20px;
+            }
+        }
+        &__fields {
+            display: flex;
+            flex-direction: column;
+            input, textarea {
+                margin-bottom: 25px;
+                padding: 10px;
+                border-radius: 5px;
+                border: 2px solid black;
+            }
+            input, button {
+                height: 40px;
+            }
+            button {
+                border-radius: 5px;
+                cursor: pointer;
+                background-color: $gold;
+                color: $primary-color;
+                font-weight: bold;
+                border: 0;
+                font-size: 16px;
+            }
+        }
     }
 }
 
-@include max-screen(1024px)  {
-    body {
-        // display: none;
+// Footer ------------------------------------------------------
+
+.footer {
+    background-color: $primary-soft;
+    height: 200px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    p {
+        color: $primary-color;
+        font-weight: bold;
     }
-}
-
-@include min-screen(480px)  {
-    background-color: blue;
-}
-
-@include min-screen(320px)  {
-    background-color: red;
-}
-@include min-screen(480px)  {
-    background-color: blue;
+    &__social {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        li {
+            margin: 10px;
+            i {
+                color: $purple;
+                font-size: 20px;
+            }
+        }
+    }
 }

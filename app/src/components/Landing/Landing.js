@@ -1,8 +1,11 @@
-import React from "react";
+import React, {useState} from "react";
 import { Link } from "react-router-dom";
 import Footer from "../Footer/Footer";
+import Contact from "../Contact/Contact";
+
 
 const Landing = () => {
+  const [showContact, setShowContact] = useState(false)
   return (
     <>
       <header>
@@ -29,11 +32,13 @@ const Landing = () => {
               <a href="#">BLOG</a>
             </li>
           </ul>
-          <div className="navigation__toggle">
-            <i className="fa-solid fa-bars"></i>
+          <div className="navigation__start">
+            <button onClick={() => setShowContact(true)}>Get started</button>
           </div>
         </nav>
       </header>
+
+      {showContact && <Contact setShowContact={setShowContact}/>}
 
       <div className="hero">
         <div className="hero__content">
@@ -46,7 +51,7 @@ const Landing = () => {
             will remember, vastly improve your key metrics, and display your
             brand with pride.
           </p>
-          <Link to="./get-started">Let's talk business</Link>
+          <button onClick={() => setShowContact(true)}>Let's talk business</button>
         </div>
         <div className="hero__image">
           <img
@@ -146,7 +151,7 @@ const Landing = () => {
               <img src="/assets/img/agile.svg" alt="design" />
             </div>
             <div className="design__content">
-              <h2>we are agile</h2>
+              <h2>We are agile</h2>
               <span>That’s how we deliver solutions</span>
               <p>
                 We are not betting on a "big bang" launch. We stick to flexible
@@ -161,6 +166,7 @@ const Landing = () => {
           </div>
         </section>
       </div>
+      <Footer />
     </>
   );
 };
