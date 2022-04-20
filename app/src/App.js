@@ -4,6 +4,7 @@ import PrivateRoute from './routes/PrivateRoute'
 import Dashboard from "./components/Dashboard/Dashboard"
 
 import Landing from './components/Landing/Landing'
+import GetStarted from './components/GetStarted/GetStarted'
 
 
 import Login from "./components/Auth/Login/Login"
@@ -15,6 +16,7 @@ function App() {
     <Router>
       <Routes>
         <Route exact path="/" element={<Landing />} />
+        <Route exact path="/get-started" element={<GetStarted />} />
         <Route path="/dashboard" element={<PrivateRoute  component={Dashboard} />}/>
         <Route path='/login' element={<Login />} />
         <Route path='/register' element={<Register />} />

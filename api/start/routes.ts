@@ -25,6 +25,10 @@ Route.group(() => {
   Route.post('/login', 'AuthController.login')
 }).prefix('api/auth')
 
+Route.group(() => {
+  Route.post('/', 'ProjectsController.create')
+}).prefix('api/get-started')
+
 
 Route.group(() => {
 

@@ -1,7 +1,7 @@
 import { schema, rules } from '@ioc:Adonis/Core/Validator'
 import type { HttpContextContract } from '@ioc:Adonis/Core/HttpContext'
 
-export default class AuthValidator {
+export default class ProjectValidator {
   constructor(protected ctx: HttpContextContract) {}
 
   /*
@@ -23,19 +23,17 @@ export default class AuthValidator {
    *     ])
    *    ```
    */
+
   public schema = schema.create({
-    username: schema.string(
-      { trim: true, escape: true },
-      [rules.unique({ table: 'users', column: 'username', caseInsensitive: true })]
-    ),
+    name: schema.string({ trim: true, escape: true }, [rules.minLength(3)]),
+    number: schema.string({ trim: true, escape: true }),
+    budget: schema.string({ trim: true, escape: true }),
+    company: schema.string({ trim: true, escape: true}),
+    description: schema.string({ trim: true, escape: true }, [rules.minLength(10)]),
     email: schema.string(
-      { trim: true, escape: true }, 
-      [rules.email(), rules.unique({ table: 'users', column: 'email', caseInsensitive: true })]
+      { trim: true }, 
+      [rules.email(), rules.unique({ table: 'projects', column: 'email', caseInsensitive: true })]
     ),
-    password: schema.string(
-      {}, 
-      [rules.minLength(6)]
-    )
   })
 
   /**
@@ -50,9 +48,10 @@ export default class AuthValidator {
    *
    */
   public messages = { 
-    'username.unique': 'already exist',
-    'email.unique': 'already exist',
-    'password.minLength': 'short password'
+    required: 'The {{ field }} is required to create a new account.',
+    'email.unique': 'Email already exist!',
+    'description.minLength': 'Short description.',
+    'name.minLength': 'Please type full name.'
   }
 }
       

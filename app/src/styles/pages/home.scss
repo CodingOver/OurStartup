@@ -1,0 +1,477 @@
+// Navigation ------------------------------------------------------
+
+.navigation {
+    margin: 0 10%;
+    height: 100px;
+    padding: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    &__items {
+        display: none;
+    }
+    &__start {
+        button {
+            background-color: $gold;
+            border: 0;
+            padding: 7px 25px;
+            border-radius: 30px;
+            color: $primary-color;
+            font-weight: 900;
+            font-size: 18px;
+            cursor: pointer;
+        }
+    }
+
+    @include max-screen(1024px)  {
+        margin: 0 5%;
+    }
+    @include max-screen(480px)  {
+        margin: 0;
+        &__logo {
+            img {
+                margin-top: 10px;
+                width: 150px;
+            }
+        }
+        &__start {
+            button {
+                padding: 7px 20px;
+                font-size: 14px;
+            }
+        }
+    }
+}
+
+// Hero ------------------------------------------------------
+
+.hero {
+    margin: 0 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &__content {
+        width: 50%;
+        padding: $default-padding;
+        h1 {
+            color: $primary-color;
+            font-size: 38px;
+        }
+        p {
+            margin: 20px 0;
+        }
+        button {
+            margin-top: 0;
+            text-decoration: none;
+            background-color: $purple;
+            color: white;
+            padding: 10px 40px;
+            border-radius: 20px;
+            font-weight: bold;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            border: 0;
+            cursor: pointer;
+        }
+    }
+
+    &__image {
+        display: flex;
+        justify-content: flex-end;
+        width: 50%;
+        height: 100%;
+        max-height: 500px;
+    }
+    @include max-screen(1024px)  {
+        margin: 0 5%;
+        &__content {
+            width: 60%;
+            h1 {
+                font-size: 32px;
+            }
+            p {
+                margin: 40px 0 !important;
+            }
+        }
+    }
+    @include max-screen(624px) {
+        &__content {
+            width: 100%;
+            h1 {
+                font-size: 26px;
+            }
+            p {
+                margin: 40px 0 !important;
+            }
+        }
+    }
+    @include max-screen(480px)  {
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+        &__content {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            h1 {
+                font-size: 24px;
+                text-align: center;
+            }
+            p {
+                margin: 20px 0 !important;
+                text-align: center;
+            }
+        }
+        &__image {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            img {
+                width: 100%;
+                min-width: 250px;
+            }
+        }
+    }
+}
+
+// Service ------------------------------------------------------
+
+.services {
+    border-radius: 5px;
+    margin: 0 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 40px;
+    margin-top: 30px;
+    
+    .service {
+        display: flex;
+        align-items: center;
+        border-radius: 5px;
+        height: 100%;
+        width: 30%;
+        background-color: white;
+        box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+        &__icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: $primary-color;
+            height: 100%;
+            width: 90px;
+            border-radius: 5px 0 0 5px;
+
+            i {
+                font-size: 25px;
+                color: white;
+            }
+        }
+        &__name {
+            display: flex;
+            align-items: center;
+            padding-left: 15px;
+            background-color: white;
+            height: 100%;
+            width: 200px;
+            border-radius: 0 5px 5px 0;
+
+        }
+    }
+    @include max-screen(1024px)  {
+        margin: 0 5%;
+        margin-top: 30px;
+    }
+
+    @include max-screen(624px)  {
+        flex-wrap: wrap;
+        justify-content: space-around;
+        .service {
+            width: 47%;
+            margin-bottom: 20px;
+        }
+    }
+
+    @include max-screen(624px) {
+        height: 50px;
+        .service {
+            &__icon {
+                i {
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+
+    @include max-screen(480px) {
+        margin: 0 5%;
+        .service {
+            &:nth-child(2) {
+                flex-direction: row-reverse;
+                .service__icon {
+                    border-radius: 0 5px 5px 0;
+                }
+            }
+            &__icon {
+                background-color: $primary-color;
+            }
+            width: 100%;
+            margin-bottom: 20px;
+        }
+    }
+}
+
+
+// About ------------------------------------------------------
+
+.about {
+    height: auto;
+    margin: 40px 10%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 50px;
+    border-radius: 5px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+
+    
+    &__title {
+        width: 500px;
+        text-align: center;
+        font-size: 25px;
+    }
+    &__items {
+        display: flex;
+        margin-top: 50px;
+    }
+    &__item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 10px;
+        padding: 10px;
+        min-height: 150px;
+        background-color: white;
+        border-radius: 5px;
+        box-shadow: rgba(0, 0, 0, 0.2) 0px 18px 50px -10px;
+        p {
+            margin-top: 10px;
+            text-align: center;
+        }
+    }
+    @include max-screen(1024px)  {
+        margin: 0 5%;
+        margin-top: 30px;
+    }
+    @include max-screen(624px)  {
+        margin-top: 130px;
+        &__items {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+    @include max-screen(480px)  {
+        margin: 0;
+        margin-top: 160px;
+        &__title {
+            max-width: 90%;
+        }
+    }
+
+}
+
+// // Design ------------------------------------------------------
+
+.design {
+    margin: 30px;
+    &__card {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    &__content {
+        width: 50%;
+        h2 {
+            color: $primary-color;
+            font-size: 30px;
+            margin-bottom: 10px;
+        }
+        span {
+            background-color: $purple;
+            border-radius: 20px;
+            padding: 0 20px;
+            color: white;
+        }
+        p {
+            margin: 10px 0;
+        }
+    }
+    &__image {
+        img {
+            max-width: 400px;
+        }
+    }
+    @include max-screen(1024px)  {
+        &__image {
+            img {
+                max-width: 300px;
+            }
+        }
+    }
+    @include max-screen(624px)  {
+        &__card {
+            display: flex;
+            flex-direction: column;
+        }
+        &__card:nth-child(2) {
+            margin-top: 40px;
+            flex-direction: column-reverse;
+        }
+        &__content {
+            width: 100%;
+        }
+    }
+}
+
+// Contact ------------------------------------------------------
+
+.contact {
+    background-color: #e5e5f7;
+background-image:  radial-gradient(#444cf7 0.5px, transparent 0.5px), radial-gradient(#444cf7 0.5px, #e5e5f7 0.5px);
+background-size: 20px 20px;
+background-position: 0 0,10px 10px;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &__close {
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin: 30px;
+        font-size: 35px;
+        cursor: pointer;
+        color: $purple;
+    }
+    &__form {
+        background-color: white;
+        height: auto;
+        width: 80%;
+        border-radius: 5px;
+        max-width: 500px;
+        padding: 20px;
+        padding-bottom: 40px;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+        &__content {
+            margin-top: 30px;
+            h2 {
+                color: $purple;
+                font-size: 20px;
+            }
+            p {
+                font-size: 14px;
+                margin: 20px;
+            }
+            &__error {
+                background-color: $error-bg;
+                padding: 10px;
+                margin-bottom: 10px;
+                border-radius: 3px;
+                p {
+                    font-weight: bold
+                }
+            }
+            &__success {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                background-color: whitesmoke;
+                padding: 20px;
+                img {
+                    width: 200px;
+                }
+                p {
+                    margin-top: 20px;
+                    font-weight: bold;
+                    color: $success;
+                }
+            }
+        }
+        &__fields {
+            display: flex;
+            flex-direction: column;
+            input, textarea, select {
+                margin-bottom: 25px;
+                padding: 10px;
+                border-radius: 5px;
+                border: 2px solid black;
+            }
+            input, button, select {
+                height: 40px;
+            }
+            button {
+                border-radius: 5px;
+                cursor: pointer;
+                background-color: $gold;
+                color: $primary-color;
+                font-weight: bold;
+                border: 0;
+                font-size: 16px;
+            }
+            &__row {
+                display: flex;
+                justify-content: space-between;
+                select {
+                    width: 47%;
+                    cursor: pointer;
+                }
+                input {
+                    width: 47%;
+                }
+            }
+        }
+    }
+}
+
+// Footer ------------------------------------------------------
+
+.footer {
+    background-color: $primary-soft;
+    height: 200px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    p {
+        color: $primary-color;
+        font-weight: bold;
+    }
+    &__social {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        li {
+            margin: 10px;
+            i {
+                color: $purple;
+                font-size: 20px;
+            }
+        }
+    }
+    @include max-screen(624px) {
+        flex-direction: column;
+        p {
+            max-width: 100%;
+            text-align: center;
+        }
+        &__social {
+            display: flex;
+        }
+    }
+}
